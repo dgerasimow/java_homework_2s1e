@@ -1,10 +1,7 @@
-package ru.kpfu.itis.gerasimov.net;
+package ru.kpfu.itis.gerasimov;
 
-import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
+import ru.kpfu.itis.gerasimov.net.HttpClientImplementation;
+
 import java.util.HashMap;
 import java.util.Map;
 

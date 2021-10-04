@@ -74,7 +74,7 @@ public class HttpClientImplementation implements HttpClient {
             postConnection.setDoOutput(true);
             try (OutputStream outputStream = postConnection.getOutputStream()) {
                 byte[] input = jsonInputString.getBytes(StandardCharsets.UTF_8);
-                outputStream.write(input);
+                outputStream.write(input, 0, input.length);
             }
 
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(postConnection.getInputStream(),
