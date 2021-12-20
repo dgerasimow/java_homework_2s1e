@@ -1,12 +1,12 @@
 CREATE TABLE role (
     id bigint primary key,
-    name varchar(50)
+    name varchar(50) not null unique
 );
 
 CREATE TABLE "user" (
     telegram_id bigint primary key,
-    user_name varchar(100),
-    fullname varchar(150),
+    user_name varchar(100) UNIQUE NOT NULL, --очевидно, что юзернейм уникаплен и не может быть нулл
+    fullname varchar(150) check (char_length(fullname)>2), --имя должно быть больше 2
     group_num varchar(6),
     course smallint,
     role_id bigint references role(id)
